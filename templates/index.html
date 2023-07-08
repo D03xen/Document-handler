@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <title>Merge&Convert: Merge your pdf files and covert from word to pdf here</title>
+</head>
+            <!-- Developed by Debparna Biswas -->
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-flex justify-content-center align-items-center">
+    <a class="navbar-brand" href="#">Merge&Convert</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Contact Us
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Portfolio</a>
+            <a class="dropdown-item" href="#">LinkedIn</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href='#')>Write to Us</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="jumbotron">
+    <h1 class="display-4">Hi there,</h1>
+    <p class="lead">This is Merge&Convert : your favourite destination to merge your Pdfs, convert your word
+      documents to Pdf, convert Images from JPG to PNG all in one place.</p>
+    <hr class="my-4">
+    <p>To Contact Us/Send your Suggestions. Click Below.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Feedback</a>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <!-- <strong class="d-inline-block mb-2 text-primary">Word to PDF Converter</strong> -->
+          <h3 class="mb-0">Word to PDF Converter</h3>
+          <div class="mb-1 text-muted"></div>
+          <!-- <p class="card-text mb-auto">You can upload your word file below to convert to PDF</p> -->
+          <form action="/wordupload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="exampleFormControlFile1">You can upload your word file below to convert to PDF</label>
+              <input type="file" name="wordfile" class="form-control-file" id="exampleFormControlFile1" accept=".docx">
+              <input class="btn btn-primary my-3" type="submit" value="Submit">
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <!-- <strong class="d-inline-block mb-2 text-success">Design</strong> -->
+          <h3 class="mb-0">PDF Merger</h3>
+          <div class="mb-1 text-muted"></div>
+          <!-- <p class="mb-auto">You can upload your pdf file(s) below to merge them</p> -->
+          <form method="post" action="/merge" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="exampleFormControlFile1">You can upload your pdf file(s) below to merge them</label>
+              <input type="file" name="pdfs" class="form-control-file" id="exampleFormControlFile1" multiple accept=".pdf">
+              <input class="btn btn-primary my-3" type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <!-- <strong class="d-inline-block mb-2 text-primary">JPG/JPEG to PNG Converter</strong> -->
+          <h3 class="mb-0">JPG to PNG Converter</h3>
+          <div class="mb-1 text-muted"></div>
+          <!-- <p class="card-text mb-auto">You can upload your JPG/JPEG file below</p> -->
+          <form action="/jpgupload" method="post" enctype="multipart/form-data"> 
+            <div class="form-group">
+              <label for="exampleFormControlFile1">You can upload your JPG file below</label>
+              <input type="file" name="jpgfile" class="form-control-file" id="exampleFormControlFile1" accept=".jpg,.jpeg">
+              <input class="btn btn-primary my-3" type="submit" value="Submit">
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <!-- <strong class="d-inline-block mb-2 text-success">Design</strong> -->
+          <h3 class="mb-0">PNG to JPG Converter</h3>
+          <div class="mb-1 text-muted"></div>
+          <!-- <p class="mb-auto">You can upload your PNG file below</p> -->
+          <form action="/pngupload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="exampleFormControlFile1">You can upload your PNG file below</label>
+              <input type="file" name="pngfile" class="form-control-file" id="exampleFormControlFile1" accept=".png">
+              <input class="btn btn-primary my-3" type="submit" value="Submit">
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="blog-footer d-flex justify-content-center align-items-center">
+    <p>All Rights Reserved. Designed by Debparna Biswas.
+    </p>
+  </footer>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+          crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  
+</body>
+
+</html>
